@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+<head>
+<title>DND rocks 4</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+body
+{
+background-color:#39044b; /*#6f0e11;*/
+color:#fff;
+height: 800px;
+}
+#target1
+{ position: absolute; width:250px; height:250px; margin:30px; margin-top:-335px; margin-left:75px; padding:10px; border:1px solid #aaaaaa;z-index: 1;}
+#target2
+{ position:absolute; width:250px; height:250px; margin:30px; margin-top:-335px; padding:10px; margin-left:450px; border:1px solid #aaaaaa;z-index: 1;}
+#target3
+{ position: absolute; width:250px; height:250px; margin:30px; margin-left:825px; margin-top:-335px; padding:10px; border:1px solid #aaaaaa; z-index: 1;}
+
+#myDiv1 { margin-left:250px; position: absolute; z-index:1; margin-top:-250px;}
+#myDiv2 { margin-left:450px; position: absolute; z-index:1; margin-top:-250px;}
+
+#answers { height:275px;}
+
+#divy {float:left; width:950px; height:300px; z-index: 0;}
+
+#answer1Box,#answer2Box,#answer3Box
+{
+float: left;
+margin-left: 110px;
+width: 250px;
+height: 250px;
+}
+
+h2
+{
+margin-left:50px;
+margin-right:50px;
+text-shadow: 0 0 10px #c61a1a;
+font-size:25px;
+color:#c61a1a;
+}
+
+canvas {
+    position: absolute;
+}
+#bottom {
+  height:60px;
+}
+
+</style>
+
+<!-- code from http://stackoverflow.com/questions/17201570/check-if-a-div-contains-an-image-html5-drag-and-drop -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script>
+
+function allowDrop(ev){
+   ev.preventDefault();
+}
+
+function drag(ev){
+   ev.dataTransfer.setData("content", ev.target.id);
+}
+
+function drop(ev){
+   ev.preventDefault();
+   var image = ev.dataTransfer.getData("content");
+   ev.target.appendChild(document.getElementById(image));
+
+  if($('#target1').find('#answer1').length == 1)
+  {
+    alert("Wrong! Try again!");
+  }
+
+  else if($('#target1').find('#answer2').length == 1)
+  {
+    alert("Wrong! Try again!");
+  }
+
+  else if($('#target1').find('#answer3').length == 1)
+  {
+    alert("CORRECT! This is SHALE. Shale is a easily broken sedimentary rock with obvious layers.");
+  }
+
+  else if($('#target2').find('#answer1').length == 1)
+  {
+    alert("CORRECT! This is SLATE. Slate is a metamorphic rock, much harder than shale, and you can see the layers are not as obvious.");
+  }
+
+  else if($('#target2').find('#answer2').length == 1)
+  {
+    alert("Wrong! Try again!");
+  }
+
+  else if($('#target2').find('#answer3').length == 1)
+  {
+    alert("Wrong! Try again!");
+  }
+
+  else if($('#target3').find('#answer3').length == 1)
+  {
+    alert("Wrong! Try again!");
+  } 
+
+  else if($('#target3').find('#answer1').length == 1)
+  {
+    alert("Wrong! Try again!");
+  }
+
+  else if($('#target3').find('#answer2').length == 1)
+  {
+    alert("CORRECT! This is SCHIST.  Schist forms deep underground with great heat and pressure, and it often has obvious mica and garnet crystals.");
+  }
+  }
+
+</script>
+</head>
+
+<body>
+
+<h2>Drag a rock to the type of rock you believe it is. &nbsp;If correct, yay! &nbsp;If incorrect, boo! &nbsp;Whatever, make sure to drag that rock back to its starting position before you move it or another rock to the next box. &nbsp;Why all this dragging? &nbsp;Well, that's what I am trying to figure out in the coding . .  until then, drag away :) 
+</h2>
+<br>
+
+<!-- code from Tim's C21 page -->
+
+<div id="divy">
+<canvas id='c' width="850px" height="300px"></canvas>
+</div>
+<br>
+
+<div style="clear:both"><br></div>
+
+<!-- code from http://stackoverflow.com/questions/17201570/check-if-a-div-contains-an-image-html5-drag-and-drop -->
+
+<div id="target1" ondrop="drop(event)" ondragover="allowDrop(event)">Shale</div>
+<div id="target2" ondrop="drop(event)" ondragover="allowDrop(event)">Slate</div>
+<div id="target3" ondrop="drop(event)" ondragover="allowDrop(event)">Schist</div>
+
+<!-- end of answerBoxes -->
+
+<div id="whatsWhatContent">
+<div id="answers">
+   <div id="answer1Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+       <img id="answer1" src="slate4.jpg"  draggable="true"    ondragstart="drag(event)"/>
+   </div>
+
+
+   <div id="answer2Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+       <img id="answer2" src="schist4.jpg"  draggable="true" ondragstart="drag(event)">
+</div>
+
+   <div id="answer3Box" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <img id="answer3" src="shale4.jpg"  draggable="true" ondragstart="drag(event)">
+</div>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<div id="bottom">
+<p style="font-size:small; color:gray; text-align:center; height:60px">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Drag and Drop Rocks</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName" rel="cc:attributionURL">Jenny Hoffman</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+<br/>This software incorporates JQuery Google API.</p>
+</div>
+
+</body>
+</html>
