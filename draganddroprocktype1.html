@@ -48,11 +48,29 @@ canvas {
   height:60px;
 }
 
+}
+.sweet-alert{
+        background-color: #BCF1ED;
+        width: 350px;
+        margin-left: -150px;
+        /*height: 100px;*/
+}
+
+.sweet-alert h2 {
+    color: #0198E1;
+}
+
 </style>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css"> 
+
+
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script> 
 
 <!-- code from http://stackoverflow.com/questions/17201570/check-if-a-div-contains-an-image-html5-drag-and-drop -->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+
 
 <script>
 
@@ -71,47 +89,96 @@ function drop(ev){
 
   if($('#target1').find('#answer1').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+        /*http://t4t5.github.io/sweetalert/*/
+
+    // alert("Wrong! Try again!");
   }
 
   else if($('#target1').find('#answer2').length == 1)
   {
-    alert("CORRECT! This is SANDSTONE.  Notice the sand-like texture and the horizontal layers");
+    swal({   
+        title: "CORRECT! This is SANDSTONE.  Notice the sand-like texture and the horizontal layers", 
+        imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
+        timer: 2000,   
+        showConfirmButton: false });
+    
+              
+    /*alert("CORRECT! This is SANDSTONE.  Notice the sand-like texture and the horizontal layers");*/
   }
 
   else if($('#target1').find('#answer3').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Nope, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target2').find('#answer1').length == 1)
   {
-    alert("CORRECT! This is MARBLE. Notice the sparkly crystals due to heat and pressure");
+    swal({   
+        title: "CORRECT! This is MARBLE. Notice the sparkly crystals due to heat and pressure", 
+        imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
+        timer: 2000,   
+        showConfirmButton: false });
+    /*alert("CORRECT! This is MARBLE. Notice the sparkly crystals due to heat and pressure");*/
   }
 
   else if($('#target2').find('#answer2').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Nope, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target2').find('#answer3').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Nope, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target3').find('#answer3').length == 1)
   {
-    alert("CORRECT! This is BASALT. Notice the dark color and extremly tiny grain suggesting very fast cooling near or at the surface");
+    swal({   
+        title: "CORRECT! This is BASALT. Notice the dark color and extremly tiny grain suggesting very fast cooling near or at the surface", 
+        imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
+        timer: 2000,   
+        showConfirmButton: false });
+    /*alert("CORRECT! This is BASALT. Notice the dark color and extremly tiny grain suggesting very fast cooling near or at the surface");*/
   } 
 
   else if($('#target3').find('#answer1').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Nope, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target3').find('#answer2').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Nope, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
   }
 
@@ -120,7 +187,7 @@ function drop(ev){
 
 <body>
 
-<h2>Drag a rock to the category you believe it belongs to. &nbsp;If correct, yay! &nbsp;If incorrect, boo! &nbsp;Whatever, make sure to drag that rock back to its starting position before you move it or another rock to the next box. &nbsp;Why all this dragging? &nbsp;Well, that's what I am trying to figure out in the coding . .  until then, drag away :) 
+<h2>Drag a rock to the category you believe it belongs to. &nbsp;If correct, yay! &nbsp;If incorrect, boo! &nbsp;Make sure to drag the rock back to its starting position before you move it or another rock to the next box :)
 </h2>
 <br>
 
