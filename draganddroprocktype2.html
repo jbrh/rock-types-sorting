@@ -48,7 +48,23 @@ canvas {
   height:60px;
 }
 
+.sweet-alert{
+        background-color: #BCF1ED;
+        width: 350px;
+        margin-left: -150px;
+        /*height: 100px;*/
+}
+
+.sweet-alert h2 {
+    color: #0198E1;
+}
+
 </style>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.css"> 
+
+
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/0.5.0/sweet-alert.min.js"></script> 
 
 <!-- code from http://stackoverflow.com/questions/17201570/check-if-a-div-contains-an-image-html5-drag-and-drop -->
 
@@ -70,47 +86,90 @@ function drop(ev){
 
   if($('#target1').find('#answer1').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target1').find('#answer2').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target1').find('#answer3').length == 1)
   {
-    alert("CORRECT! This is PEGMATITE.  Notice the very large crystals indicating that the magma was trapped deep underground and thus took a very long time to cool.");
+    swal({   
+        title: "CORRECT! This is PEGMATITE.  Notice the very large crystals indicating that the magma was trapped deep underground and thus took a very long time to cool.", 
+        timer: 2000,   
+        showConfirmButton: false });
+    /*alert("CORRECT! This is PEGMATITE.  Notice the very large crystals indicating that the magma was trapped deep underground and thus took a very long time to cool.");*/
   }
 
   else if($('#target2').find('#answer2').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target2').find('#answer1').length == 1)
   {
-    alert("CORRECT! This is GRANITE. Notice the medium sized crystals indicating that the magma cooled over a relatively shorter period of time than for pegmatite.");
+    swal({   
+        title: "CORRECT! This is GRANITE. Notice the medium sized crystals indicating that the magma cooled over a relatively shorter period of time than for pegmatite.", 
+        timer: 2000,   
+        showConfirmButton: false });
+    /*alert("CORRECT! This is GRANITE. Notice the medium sized crystals indicating that the magma cooled over a relatively shorter period of time than for pegmatite.");*/
   }
 
   else if($('#target2').find('#answer3').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target3').find('#answer3').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   } 
 
   else if($('#target3').find('#answer1').length == 1)
   {
-    alert("Wrong! Try again!");
+    swal({   
+        title: "Wrong, please try again :)",
+        imageUrl: "http://www.animateit.net/data/media/192/acc012.gif",  
+        timer: 2000,   
+        showConfirmButton: false });
+    //alert("Wrong! Try again!");
   }
 
   else if($('#target3').find('#answer2').length == 1)
   {
-    alert("CORRECT! This is OBSIDIAN. Notice that there are no crystals -- the surface is like glass.  This indicates that the magma erupted above the surface and the resulting lava cooled almost immediately");
+    swal({   
+        title: "CORRECT! This is OBSIDIAN. Notice that there are no crystals -- the surface is like glass.  This indicates that the magma erupted above the surface and the resulting lava cooled almost immediately", 
+        imageUrl: "http://www.animateit.net/data/media/192/acc004.gif", 
+        timer: 2000,   
+        showConfirmButton: false });
+    /*alert("CORRECT! This is OBSIDIAN. Notice that there are no crystals -- the surface is like glass.  This indicates that the magma erupted above the surface and the resulting lava cooled almost immediately");*/
   }
   }
 
@@ -119,7 +178,7 @@ function drop(ev){
 
 <body>
 
-<h2>Drag a rock to the type of igneous rock you believe it is. &nbsp; If correct, yay! &nbsp;If incorrect, boo! &nbsp; Whatever, make sure to drag that rock back to its starting position before you move it or another rock to the next box. &nbsp; Why all this dragging? &nbsp; Well, that's what I am trying to figure out in the coding . .  until then, drag away :) 
+<h2>Drag a rock to the category you believe it belongs to. &nbsp;If correct, yay! &nbsp;If incorrect, boo! &nbsp;Make sure to drag the rock back to its starting position before you move it or another rock to the next box :) 
 </h2>
 <br>
 
